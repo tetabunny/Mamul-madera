@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Sen:wght@400..800&display=swap");
+
+body {
+    background-color: #eeeae1;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav a {
+    color: #5c3c25;
+    font-family: "sen", sans-serif;
+    text-decoration: none;
+    margin-right: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+}
+
+.navbar {
+    list-style-type: none; /* Quita las viñetas */
+    margin: 0;
+    padding: 0;
+}
+
+/* Elimina la decoración de los enlaces */
+.navbar a {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit; /* Usa el color del texto del contenedor */
+    padding: 10px;
+    display: block; /* Para que los enlaces ocupen todo el espacio del li */
+}
+
+/* Estilo del submenú */
+.submenu {
+    list-style-type: none; /* Quita las viñetas */
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background: #f9ebc7;
+    display: none; /* Oculta el submenú por defecto */
+}
+
+/* Muestra el submenú al hacer hover */
+.navbar li:hover .submenu {
+    display: block;
+}
+
+/* Estilos adicionales para la barra */
+.navbar li {
+    display: inline-block; /* Hace que los elementos de la lista estén en línea */
+    position: relative;
+}
+
+.submenu li {
+    display: block; /* Para que los elementos del submenú estén en bloque */
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 50px;
+    color: #5c3c25;
+    cursor: pointer;
+}
+
+.logo {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#container-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 10rem;
+    font-weight: bold;
+    font-style: oblique;
+    color: rgb(110, 72, 10);
+}
+
+.card {
+    color: #eeeae1;
+    background-color: #eeeae1;
+    height: 250px;
+    margin: 50px;
+    padding: 10px;
+}
+
+img {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+footer {
+    font-family: "sen", sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.card {
+    width: 200px; /* Ajusta el ancho según sea necesario */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; /* Oculta el desbordamiento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-content {
+    padding: 16px;
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "sen", sans-serif;
+    font-size: 20px;
+    color: #9b6f53;
+}
+
+@media (width < 400px) {
+    .nav a {
+        font-size: 12px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #f9ebc7;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar li {
+        margin: 15px 0;
+    }
+
+    .submenu {
+        position: static;
+        padding-left: 20px;
+    }
+
+    .hamburger {
+        display: block; /* Muestra el icono hamburguesa en móvil */
+    }
+}

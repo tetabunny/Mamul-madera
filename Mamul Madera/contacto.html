@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ES">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contacto</title>
+        <link rel="stylesheet" href="../css/contacto.css" />
+    </head>
+    <body>
+        <header>
+            <div class="logosint">
+                <a href="/index.html"
+                    ><img src="./Img/Captura_de_pantalla_2024-08-09_a_la_s__15.05.52-removebg 2.svg" alt="logo mamul"
+                /></a>
+            </div>
+            <nav class="nav">
+                <ul class="navbar">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li>
+                        <a href="./products.html">Productos</a>
+                        <ol class="submenu">
+                            <li><a href="./cocina.html"> Cocina </a></li>
+                            <li><a href="./muebles.html"> Muebles </a></li>
+                            <li><a href="./lamparas.html"> Lámparas </a></li>
+                        </ol>
+                    </li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+
+                <div class="hamburger" onclick="toggleMenu()">
+                    &#9776;
+                    <!-- Este es el símbolo del menú hamburguesa -->
+                </div>
+            </nav>
+        </header>
+
+        <script src="./js/scripts.js"></script>
+
+        <section>
+            <h3>Formulario de contacto</h3>
+            <form action="formularioenvi.html">
+                <fieldset>
+                    <legend>Información Personal</legend>
+                    <div>
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" placeholder="Juan Perez" required />
+                    </div>
+                    <div>
+                        <label for="name">E-mail</label>
+                        <input type="email" id="name" name="name" placeholder="juanperez90@gmail.com" required />
+                    </div>
+                    <div>
+                        <label for="name">Teléfono</label>
+                        <input type="tel" id="name" name="name" placeholder="1167890123" required />
+                    </div>
+                    <div>
+                        <label for="name">Mensaje</label>
+                        <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+                    </div>
+                </fieldset>
+                <input type="submit" />
+            </form>
+        </section>
+        <footer>Copyright 2024 - @mamul_____</footer>
+    </body>
+</html>

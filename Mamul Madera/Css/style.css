@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Sen:wght@400..800&display=swap");
+
+body {
+    background-color: #eeeae1;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logosint {
+    height: 75px;
+    width: 50px;
+    display: flex;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav a {
+    color: #5c3c25;
+    font-family: "sen", sans-serif;
+    text-decoration: none;
+    margin-right: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+}
+
+.nav a:hover {
+    color: #c4661f;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.navbar {
+    list-style-type: none; /* Quita las viñetas */
+    margin: 0;
+    padding: 0;
+}
+
+/* Elimina la decoración de los enlaces */
+.navbar a {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit; /* Usa el color del texto del contenedor */
+    padding: 10px;
+    display: block; /* Para que los enlaces ocupen todo el espacio del li */
+}
+
+/* Estilo del submenú */
+.submenu {
+    list-style-type: none; /* Quita las viñetas */
+    margin: 0;
+    padding: 0;
+    background: #f9ebc7;
+    position: absolute;
+    display: none; /* Oculta el submenú por defecto */
+}
+
+/* Muestra el submenú al hacer hover */
+.navbar li:hover .submenu {
+    display: block;
+}
+
+/* Estilos adicionales para la barra */
+.navbar li {
+    display: inline-block; /* Hace que los elementos de la lista estén en línea */
+    position: relative;
+}
+
+.submenu li {
+    display: block; /* Para que los elementos del submenú estén en bloque */
+}
+
+.hamburger {
+    display: none;
+    font-size: 50px;
+    color: #5c3c25;
+    cursor: pointer;
+}
+
+.logo {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centra el contenedor en la página */
+    margin: 0 auto;
+    padding: 20px; /* Espaciado interno para el contenedor */
+    padding-bottom: 60px;
+}
+
+/* Estilo para el contenedor de las tarjetas */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en caso de no caber en una línea */
+    gap: 20px; /* Espaciado entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas dentro del contenedor */
+    font-family: "nunito sans", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Estilo para cada tarjeta */
+.card {
+    flex: 1 1 300px; /* Flex grow, shrink, and basis */
+    max-width: 300px; /* Ancho máximo para cada tarjeta */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para los enlaces dentro de las tarjetas */
+.card a {
+    display: block;
+    width: 100%; /* Asegura que el ancho de la imagen sea el del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    color: #5c3c25;
+}
+
+/* Estilo para las imágenes dentro de las tarjetas */
+.card img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.card-text {
+    margin-top: 10px; /* Espacio entre la imagen y el texto */
+    font-size: 16px; /* Tamaño del texto */
+    color: #5c3c25; /* Cambia este valor para el color deseado */
+    font-weight: bold; /* Pone el texto en negrita */
+    text-align: center;
+}
+
+.card p:hover {
+    color: #c4661f;
+}
+
+.info {
+    border: 2px dotted #5c3c25;
+    border-right: none;
+    border-left: none;
+}
+
+p {
+    font-family: "Sen", sans-serif;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+#about-us {
+    font-family: "nunito sans", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #c4661f;
+}
+
+#text-abt {
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: center;
+    color: #5c3c25;
+}
+.contenedor {
+    display: flex;
+    justify-content: center; /* Centra el contenedor horizontalmente */
+    padding: 20px;
+    background-color: #eeeae1; /* Fondo opcional */
+}
+
+/* Estilo para el contenedor de las nuevas cards */
+.contenedor-2 {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las cards se envuelvan en filas si no caben en una línea */
+    gap: 20px; /* Espacio entre las cards */
+    justify-content: center; /* Centra las cards dentro del contenedor */
+}
+
+/* Estilo general para cada card */
+.carta {
+    background-color: #ffffff; /* Fondo blanco para las cards */
+    border: 1px solid #ddd; /* Borde suave */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    overflow: hidden; /* Oculta contenido que se salga de la card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 624px; /* Ancho fijo */
+    height: 491px; /* Alto fijo */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    transition: transform 0.3s; /* Animación para hover */
+}
+
+.carta:hover {
+    transform: translateY(-10px); /* Efecto al pasar el mouse */
+}
+
+/* Estilo para las imágenes dentro de las cards */
+.carta img {
+    width: 100%;
+    height: auto;
+    max-height: 350px; /* Ajusta según tu diseño */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+/* Estilo para el texto dentro de las cards */
+.texto-carta {
+    margin-top: 15px; /* Espacio entre la imagen y el texto */
+    font-family: "nunito sans", sans-serif;
+    font-size: 24px; /* Tamaño del texto */
+    color: #5c3c25; /* Cambia este valor al color que prefieras */
+    text-align: center; /* Centra el texto horizontalmente */
+    font-weight: bold; /* Texto en negrita */
+    padding: 0 20px; /* Padding lateral para que el texto no toque los bordes */
+}
+
+footer {
+    font-family: "sen", sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+@media (width < 400px) {
+    .nav a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .carta {
+        width: 48%; /* Dos cards por fila */
+    }
+}
+
+@media (max-width: 800px) {
+    .carta {
+        width: 100%; /* Una card por fila */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #f9ebc7;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar li {
+        margin: 15px 0;
+    }
+
+    .submenu {
+        position: static;
+        padding-left: 20px;
+    }
+
+    .hamburger {
+        display: block; /* Muestra el icono hamburguesa en móvil */
+    }
+}
